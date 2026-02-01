@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sığacık Huzur ve Bakım Evi</title>
+    <style>
+        /* GENEL AYARLAR */
+        :root {
+            --primary-color: #2c7da0; 
+            --secondary-color: #a9d6e5; 
+            --accent-color: #619b8a; 
+            --text-color: #333;
+            --bg-light: #f8f9fa;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+        h1, h2, h3 { color: var(--primary-color); }
+        
+        /* NAVIGATION BAR */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 20px;
+        }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary-color); }
+        .nav-links { list-style: none; display: flex; gap: 20px; }
+        .nav-links a { text-decoration: none; color: #555; font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--accent-color); }
+
+        /* HERO BÖLÜMÜ */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('huzurevi.jpg'); 
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 60px;
+        }
+        .hero-content h1 { color: white; font-size: 3rem; margin-bottom: 10px; }
+        .hero-content p { font-size: 1.2rem; max-width: 600px; margin: 0 auto; }
+
+        /* BÖLÜM GENEL STİLLERİ */
+        section { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
+        .section-title { text-align: center; margin-bottom: 40px; font-size: 2.2rem; }
+
+        /* KONUM VE SAĞLIK BİLGİSİ */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+        .info-card { background: var(--bg-light); padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        
+        /* Ana Tanıtım Videosu İçin Kapsayıcı */
+        .main-video-container {
+            width: 100%;
+            max-width: 800px; /* Çok geniş ekranlarda devasa olmasın */
+            margin: 20px auto;
+            background: #000;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .main-video-container video {
+            width: 100%;
+            height: auto; /* Videonun orjinal oranını korur */
+            display: block;
+        }
+
+        /* GALERİ IZGARA SİSTEMİ */
+        .gallery-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 20px; 
+        }
+        .gallery-item { 
+            border: 1px solid #ddd; 
+            border-radius: 10px; 
+            overflow: hidden; 
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .gallery-item:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        
+        /* RESİMLER İÇİN AYAR (Kesip Sığdır) */
+        .gallery-item img {
+            width: 100%;
+            height: 250px; 
+            object-fit: cover; /* Resmi kutuya yayar, taşanı gizler */
+            display: block;
+        }
+
+        /* VİDEOLAR İÇİN AYAR (Tamamını Göster) */
+        .gallery-item video {
+            width: 100%;
+            height: 300px; /* Videolara biraz daha boy verdik */
+            object-fit: contain; /* Videoyu KESMEZ, kutunun içine sığdırır */
+            background-color: #000; /* Kenarda boşluk kalırsa siyah olsun */
+            display: block;
+        }
+
+        .item-info { padding: 15px; text-align: center; }
+        .item-info h3 { margin: 0; font-size: 1.1rem; color: var(--primary-color); }
+
+        /* EKİBİMİZ */
+        .team-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+        .team-member { background: var(--secondary-color); color: #0f4c75; padding: 15px 30px; border-radius: 50px; font-weight: bold; font-size: 1.1rem; }
+
+        /* İLETİŞİM (FOOTER) */
+        footer { background: var(--primary-color); color: white; text-align: center; padding: 50px 20px; }
+        .phone-number { font-size: 2.5rem; font-weight: bold; margin: 20px 0; display: block; color: white; text-decoration: none; }
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; } 
+            .hero-content h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Sığacık Huzur ve Bakım Evi</div>
+            <ul class="nav-links">
+                <li><a href="#anasayfa">Anasayfa</a></li>
+                <li><a href="#hakkimizda">Hakkımızda</a></li>
+                <li><a href="#odalar">Odalarımız</a></li>
+                <li><a href="#etkinlikler">Etkinliklerimiz</a></li>
+                <li><a href="#ekip">Ekibimiz</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="anasayfa" class="hero">
+        <div class="hero-content">
+            <h1>Sakin Şehirde Huzurlu Yaşam</h1>
+            <p>İzmir Sığacık'ın bol oksijenli havasında, profesyonel bakım ve ev sıcaklığı.</p>
+        </div>
+    </section>
+
+    <section id="hakkimizda">
+        <h2 class="section-title">Neden Sığacık?</h2>
+        <div class="about-grid">
+            <div class="info-card">
+                <h3>İyileştiren Hava Kalitesi</h3>
+                <p>Huzurevimiz, Türkiye'nin ilk 'Cittaslow' (Sakin Şehir) unvanına sahip Sığacık'ta yer almaktadır. Ege Denizi'nden gelen iyotlu hava ve bölgenin düşük nem oranı, ileri yaş solunum sağlığı için doğal bir şifa kaynağıdır.</p>
+            </div>
+            <div>
+                <img src="Sığacık.jpg" alt="Sığacık Manzarası" style="width:100%; border-radius:10px;">
+            </div>
+        </div>
+
+        <div style="margin-top: 60px;">
+            <h2 class="section-title">Hizmet Kalitemiz & Tanıtım</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 30px auto;">
+                Uzman ekibimizle 7/24 sağlık takibi, kişiye özel beslenme programları ve sosyal aktiviteler sunuyoruz.
+            </p>
+            <div class="main-video-container">
+                <video controls>
+                    <source src="Kurum_Video.mp4" type="video/mp4">
+                    Tarayıcınız video formatını desteklemiyor.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <section id="odalar" style="background-color: #f0f4f8;">
+        <h2 class="section-title">Konforlu Odalarımız</h2>
+        <div class="gallery-grid">
+            
+            <div class="gallery-item">
+                <video controls>
+                    <source src="ODA/Oda_Video.mp4" type="video/mp4">
+                </video>
+                <div class="item-info"><h3>Oda Tanıtım Videosu</h3></div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="ODA/Oda_Resim.jpg" alt="Oda Görseli">
+                <div class="item-info"><h3>Standart Oda</h3></div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="ODA/Oda_Resim1.jpg" alt="Oda Görseli">
+                <div class="item-info"><h3>Konforlu Yaşam Alanı</h3></div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="ODA/Oda_Resim2.jpg" alt="Oda Görseli">
+                <div class="item-info"><h3>Geniş Odalar</h3></div>
+            </div>
+            
+             <div class="gallery-item">
+                <img src="ODA/Oda_Resim3.jpg" alt="Oda Görseli">
+                <div class="item-info"><h3>Dinlenme Alanı</h3></div>
+            </div>
+
+            </div>
+    </section>
+
+    <section id="etkinlikler">
+        <h2 class="section-title">Sosyal Yaşam ve Etkinliklerimiz</h2>
+        <p style="text-align: center; margin-bottom: 30px;">Misafirlerimizin keyifli vakit geçirmesi için her gün çeşitli aktiviteler düzenliyoruz.</p>
+        
+        <div class="gallery-grid">
+            
+            <div class="gallery-item">
+                <video controls>
+                    <source src="Etkinlik/E1_Video.mp4" type="video/mp4">
+                </video>
+                <div class="item-info"><h3>Havuz Kenarında Yürüyüş </h3></div>
+            </div>
+            
+            <div class="gallery-item">
+                <video controls>
+                    <source src="Etkinlik/E2_Video.mp4" type="video/mp4">
+                </video>
+                <div class="item-info"><h3>Nostaljik Şarkılar </h3></div>
+            </div>
+            
+            <div class="gallery-item">
+                <video controls>
+                    <source src="Etkinlik/E3_Video.mp4" type="video/mp4">
+                </video>
+                <div class="item-info"><h3>Anneler Günü </h3></div>
+            </div>
+            
+            <div class="gallery-item">
+                <video controls>
+                    <source src="Etkinlik/E4_Video.mp4" type="video/mp4">
+                </video>
+                <div class="item-info"><h3>Fizik Tedavi Çalışması </h3></div>
+            </div>
+            
+            <div class="gallery-item">
+                <video controls>
+                    <source src="Etkinlik/E5_Video.mp4" type="video/mp4">
+                </video>
+                <div class="item-info"><h3>Bayram Kutlaması </h3></div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="Etkinlik/E_Resim.jpg" alt="Etkinlik">
+                <div class="item-info"><h3>Bayram Kutlaması</h3></div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="Etkinlik/E_Resim1.jpg" alt="Etkinlik">
+                <div class="item-info"><h3>El Sanatları</h3></div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="Etkinlik/E_Resim2.jpg" alt="Etkinlik">
+                <div class="item-info"><h3>El Sanatları</h3></div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="Etkinlik/E_Resim3.jpg" alt="Etkinlik">
+                <div class="item-info"><h3>El Sanatları</h3></div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="Etkinlik/E_Resim4.jpg" alt="Etkinlik">
+                <div class="item-info"><h3>El Sanatları</h3></div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="Etkinlik/E_Resim5.jpg" alt="Etkinlik">
+                <div class="item-info"><h3>El Sanatları</h3></div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="Etkinlik/E_Resim6.jpg" alt="Etkinlik">
+                <div class="item-info"><h3>El Sanatları</h3></div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="Etkinlik/E_Resim7.jpg" alt="Etkinlik">
+                <div class="item-info"><h3>El Sanatları</h3></div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="Etkinlik/E_Resim8.jpg" alt="Etkinlik">
+                <div class="item-info"><h3>El Sanatları</h3></div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="Etkinlik/E_Resim10.jpg" alt="Etkinlik">
+                <div class="item-info"><h3>Bahçe Keyfi</h3></div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="Etkinlik/E_Resim11.jpg" alt="Etkinlik">
+                <div class="item-info"><h3>Doğum Günü</h3></div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="Etkinlik/E_Resim13.jpg" alt="Etkinlik">
+                <div class="item-info"><h3>Gençlerle Buluşma</h3></div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="Etkinlik/E_Resim14.jpg" alt="Etkinlik">
+                <div class="item-info"><h3>Gençlerle Buluşma</h3></div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="Etkinlik/E_Resim15.jpg" alt="Etkinlik">
+                <div class="item-info"><h3>Gençlerle Buluşma</h3></div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="Etkinlik/E_Resim16.jpg" alt="Etkinlik">
+                <div class="item-info"><h3>Gençlerle Buluşma</h3></div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="Etkinlik/E_Resim17.jpg" alt="Etkinlik">
+                <div class="item-info"><h3>Gençlerle Buluşma</h3></div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="Etkinlik/E_Resim19.jpg" alt="Etkinlik">
+                <div class="item-info"><h3>Gençlerle Buluşma</h3></div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="Etkinlik/E_Resim20.jpg" alt="Etkinlik">
+                <div class="item-info"><h3>Kahve Keyfi</h3></div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="Etkinlik/E_Resim21.jpg" alt="Etkinlik">
+                <div class="item-info"><h3>Oyunlar</h3></div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="Etkinlik/E_Resim24.jpg" alt="Etkinlik">
+                <div class="item-info"><h3>Oyunlar</h3></div>
+            </div>
+        
+        </div>
+        
+    </section>
+
+    <section id="ekip" style="background-color: #f0f4f8;">
+        <h2 class="section-title">Uzman Kadromuz</h2>
+        <div class="team-list">
+            <div class="team-member">Geriatri Uzmanı Doktor</div>
+            <div class="team-member">Fizyoterapist</div>
+            <div class="team-member">Psikolog</div>
+            <div class="team-member">Sorumlu Hemşire</div>
+            <div class="team-member">Beslenme Uzmanı</div>
+            <div class="team-member">Yaşlı Bakım Teknikerleri</div>
+        </div>
+    </section>
+
+    <footer id="iletisim">
+        <h2>Bizimle İletişime Geçin</h2>
+        <p>Detaylı bilgi ve randevu için bizi arayın.</p>
+        <a href="tel:+902320000000" class="phone-number">0 (232) 000 00 00</a>
+        <p style="font-size: 0.9rem; margin-top: 30px; opacity: 0.8;">
+            Adres: Sığacık Mahallesi, Huzur Sokak, Seferihisar / İZMİR
+        </p>
+    </footer>
+
+</body>
+</html>
