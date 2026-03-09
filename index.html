@@ -1,388 +1,1385 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sığacık Huzur ve Bakım Evi</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>İzmir Huzur Evi ve Bakım Evi | Sığacık Yaşlı Bakım Merkezi</title>
+
+    <meta
+      name="description"
+      content="İzmir Sığacık'ta profesyonel yaşlı bakım, 7/24 sağlık hizmeti ve ev sıcaklığında konfor sunan İzmir huzur evi ve bakım evi. Kaliteli bir bakımevi arayanlar için ideal çözüm."
+    />
+
+    <meta
+      name="keywords"
+      content="izmir, bakımevi, huzurevi, sağlık, yaşlı bakım, izmir huzur evi ve bakım evi, sığacık huzurevi"
+    />
+
+    <link rel="canonical" href="https://www.sitenizinadi.com/" />
+
+    <meta
+      property="og:title"
+      content="İzmir Huzur Evi ve Bakım Evi | Sığacık Yaşlı Bakım Merkezi"
+    />
+    <meta
+      property="og:description"
+      content="İzmir Sığacık'ta profesyonel yaşlı bakım ve sağlık hizmetiyle ev sıcaklığında bir yaşam."
+    />
+    <meta
+      property="og:image"
+      content="https://www.sitenizinadi.com/huzurevi.jpg"
+    />
+    <meta property="og:url" content="https://www.sitenizinadi.com/" />
+    <meta property="og:type" content="website" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MedicalClinic",
+        "name": "Sığacık Huzur ve Bakım Evi",
+        "image": "https://www.sitenizinadi.com/huzurevi.jpg",
+        "@id": "https://www.sitenizinadi.com/",
+        "url": "https://www.sitenizinadi.com/",
+        "telephone": "+902320000000",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Sığacık Mahallesi, Huzur Sokak",
+          "addressLocality": "Seferihisar",
+          "addressRegion": "İzmir",
+          "addressCountry": "TR"
+        },
+        "description": "İzmir Sığacık'ta profesyonel yaşlı bakım, 7/24 sağlık hizmeti ve ev sıcaklığında konfor sunan İzmir huzur evi ve bakım evi."
+      }
+    </script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
     <style>
-        /* GENEL AYARLAR */
-        :root {
-            --primary-color: #2c7da0; 
-            --secondary-color: #a9d6e5; 
-            --accent-color: #619b8a; 
-            --text-color: #333;
-            --bg-light: #f8f9fa;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: var(--text-color);
-        }
-        h1, h2, h3 { color: var(--primary-color); }
-        
-        /* NAVIGATION BAR */
-        header {
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 20px;
-        }
-        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary-color); }
-        .nav-links { list-style: none; display: flex; gap: 20px; }
-        .nav-links a { text-decoration: none; color: #555; font-weight: 500; transition: color 0.3s; }
-        .nav-links a:hover { color: var(--accent-color); }
+      /* YUMUŞAK SAYFA GEÇİŞİ (SMOOTH SCROLL) VE BAŞLIK BOŞLUĞU */
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 80px;
+      }
 
-        /* HERO BÖLÜMÜ */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('huzurevi.jpg'); 
-            background-size: cover;
-            background-position: center;
-            height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            padding-top: 60px;
-        }
-        .hero-content h1 { color: white; font-size: 3rem; margin-bottom: 10px; }
-        .hero-content p { font-size: 1.2rem; max-width: 600px; margin: 0 auto; }
+      /* GENEL AYARLAR */
+      :root {
+        --primary-color: #2c7da0;
+        --secondary-color: #a9d6e5;
+        --accent-color: #619b8a;
+        --text-color: #333;
+        --bg-light: #f8f9fa;
+      }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        color: var(--text-color);
+      }
+      h1,
+      h2,
+      h3 {
+        color: var(--primary-color);
+      }
 
-        /* BÖLÜM GENEL STİLLERİ */
-        section { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
-        .section-title { text-align: center; margin-bottom: 40px; font-size: 2.2rem; }
+      /* NAVIGATION BAR */
+      header {
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem 20px;
+      }
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--primary-color);
+        text-decoration: none;
+      }
 
-        /* KONUM VE SAĞLIK BİLGİSİ */
-        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
-        .info-card { background: var(--bg-light); padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        
-        /* Ana Tanıtım Videosu İçin Kapsayıcı */
-        .main-video-container {
-            width: 100%;
-            max-width: 800px; /* Çok geniş ekranlarda devasa olmasın */
-            margin: 20px auto;
-            background: #000;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        .main-video-container video {
-            width: 100%;
-            height: auto; /* Videonun orjinal oranını korur */
-            display: block;
-        }
+      /* NORMAL MENÜ (MASAÜSTÜ İÇİN) */
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+        transition: all 0.3s ease;
+      }
+      .nav-links a {
+        text-decoration: none;
+        color: #555;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+      .nav-links a:hover {
+        color: var(--accent-color);
+      }
 
-        /* GALERİ IZGARA SİSTEMİ */
-        .gallery-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 20px; 
-        }
-        .gallery-item { 
-            border: 1px solid #ddd; 
-            border-radius: 10px; 
-            overflow: hidden; 
-            background: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-        }
-        .gallery-item:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        
-        /* RESİMLER İÇİN AYAR (Kesip Sığdır) */
-        .gallery-item img {
-            width: 100%;
-            height: 250px; 
-            object-fit: cover; /* Resmi kutuya yayar, taşanı gizler */
-            display: block;
-        }
+      /* HAMBURGER MENÜ İKONU (MASAÜSTÜNDE GİZLİ) */
+      .hamburger {
+        display: none;
+        cursor: pointer;
+        z-index: 1001;
+      }
+      .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: var(--primary-color);
+        margin: 5px;
+        transition: all 0.3s ease;
+      }
 
-        /* VİDEOLAR İÇİN AYAR (Tamamını Göster) */
-        .gallery-item video {
-            width: 100%;
-            height: 300px; /* Videolara biraz daha boy verdik */
-            object-fit: contain; /* Videoyu KESMEZ, kutunun içine sığdırır */
-            background-color: #000; /* Kenarda boşluk kalırsa siyah olsun */
-            display: block;
+      /* HERO BÖLÜMÜ */
+      .hero {
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url("huzurevi.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        padding-top: 60px;
+      }
+      .hero-content h1 {
+        color: white;
+        font-size: 3rem;
+        margin-bottom: 10px;
+        max-width: 800px;
+        margin: 0 auto 15px auto;
+      }
+      .hero-content p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      /* BÖLÜM GENEL STİLLERİ */
+      section {
+        padding: 60px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .section-title {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 2.2rem;
+      }
+
+      /* HAFTANIN BİLGİSİ KART TASARIMI */
+      .weekly-info-card {
+        background: var(--accent-color);
+        color: white;
+        padding: 25px;
+        border-radius: 10px;
+        margin: 60px auto 50px auto;
+        max-width: 800px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      }
+      .weekly-info-card h3 {
+        color: white;
+        margin-top: 0;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+      }
+      .weekly-info-card p {
+        font-size: 1.1rem;
+        margin-bottom: 0;
+        font-style: italic;
+        line-height: 1.5;
+      }
+
+      /* KONUM VE SAĞLIK BİLGİSİ */
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+      }
+      .info-card {
+        background: var(--bg-light);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      /* ANA TANITIM VİDEOSU İÇİN KAPSAYICI */
+      .main-video-container {
+        width: 100%;
+        max-width: 800px;
+        margin: 20px auto;
+        background: #000;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .main-video-container video {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* ODALAR İÇİN YENİ GRID SİSTEMİ */
+      .rooms-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        padding: 20px 0;
+      }
+
+      /* YATAY KAYDIRMALI GALERİ (SLIDER) SİSTEMİ - Etkinlikler İçin */
+      .slider-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+      }
+
+      .gallery-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: 20px;
+        padding: 10px 5px 30px 5px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+        width: 100%;
+      }
+
+      /* Scrollbar Tasarımı (Etkinlikler İçin) */
+      .gallery-grid::-webkit-scrollbar {
+        height: 10px;
+      }
+      .gallery-grid::-webkit-scrollbar-track {
+        background: #e0e0e0;
+        border-radius: 10px;
+      }
+      .gallery-grid::-webkit-scrollbar-thumb {
+        background: var(--primary-color);
+        border-radius: 10px;
+      }
+      .gallery-grid::-webkit-scrollbar-thumb:hover {
+        background: #1a5b78;
+      }
+
+      /* ORTAK GALERİ KARTI TASARIMI */
+      .gallery-item {
+        flex: 0 0 300px;
+        height: 300px;
+        scroll-snap-align: center;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        background: #000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s;
+        display: block;
+      }
+
+      .gallery-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .gallery-item img,
+      .gallery-item video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* OK BUTONLARI (Etkinlikler İçin) */
+      .slider-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        cursor: pointer;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        transition:
+          background 0.3s,
+          transform 0.2s;
+      }
+
+      .slider-btn:hover {
+        background-color: #1a5b78;
+        transform: translateY(-50%) scale(1.1);
+      }
+
+      .prev-btn {
+        left: -20px;
+      }
+      .next-btn {
+        right: -20px;
+      }
+
+      /* EKİBİMİZ */
+      .team-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+      .team-member {
+        background: var(--secondary-color);
+        color: #0f4c75;
+        padding: 15px 30px;
+        border-radius: 50px;
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+
+      /* İLETİŞİM (FOOTER) */
+      footer {
+        background: var(--primary-color);
+        color: white;
+        text-align: center;
+        padding: 50px 20px;
+      }
+      .phone-number {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin: 20px 0;
+        display: block;
+        color: white;
+        text-decoration: none;
+      }
+      .footer-social a {
+        color: white;
+        font-size: 2rem;
+        margin: 0 15px;
+        transition: transform 0.3s ease;
+        display: inline-block;
+      }
+      .footer-social a:hover {
+        transform: scale(1.2);
+      }
+
+      /* YÜZEN SOSYAL MEDYA BUTONLARI (SAĞ ALT KÖŞE) */
+      .floating-social {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        z-index: 9999;
+      }
+      .float-btn {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 28px;
+        text-decoration: none;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+      }
+      .float-btn:hover {
+        transform: scale(1.1);
+      }
+      .whatsapp-btn {
+        background-color: #25d366;
+      }
+      .instagram-btn {
+        background: linear-gradient(
+          45deg,
+          #f09433 0%,
+          #e6683c 25%,
+          #dc2743 50%,
+          #cc2366 75%,
+          #bc1888 100%
+        );
+      }
+
+      /* MOBİL RESPONSIVE AYARLAR */
+      @media (max-width: 768px) {
+        .about-grid {
+          grid-template-columns: 1fr;
         }
-
-        .item-info { padding: 15px; text-align: center; }
-        .item-info h3 { margin: 0; font-size: 1.1rem; color: var(--primary-color); }
-
-        /* EKİBİMİZ */
-        .team-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-        .team-member { background: var(--secondary-color); color: #0f4c75; padding: 15px 30px; border-radius: 50px; font-weight: bold; font-size: 1.1rem; }
-
-        /* İLETİŞİM (FOOTER) */
-        footer { background: var(--primary-color); color: white; text-align: center; padding: 50px 20px; }
-        .phone-number { font-size: 2.5rem; font-weight: bold; margin: 20px 0; display: block; color: white; text-decoration: none; }
-        
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .about-grid { grid-template-columns: 1fr; }
-            .nav-links { display: none; } 
-            .hero-content h1 { font-size: 2rem; }
+        .hero-content h1 {
+          font-size: 2rem;
         }
+        .prev-btn {
+          left: 5px;
+        }
+        .next-btn {
+          right: 5px;
+        }
+        .hamburger {
+          display: block;
+        }
+        .nav-links {
+          position: absolute;
+          top: 70px;
+          left: 0;
+          right: 0;
+          background-color: #ffffff;
+          flex-direction: column;
+          align-items: center;
+          gap: 0;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease-in-out;
+        }
+        .nav-links li {
+          width: 100%;
+          text-align: center;
+        }
+        .nav-links a {
+          display: block;
+          padding: 15px 0;
+          border-bottom: 1px solid #f0f0f0;
+          font-size: 1.1rem;
+        }
+        .nav-links.active {
+          max-height: 350px;
+        }
+        .float-btn {
+          width: 45px;
+          height: 45px;
+          font-size: 24px;
+        }
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <header>
-        <nav>
-            <div class="logo">Sığacık Huzur ve Bakım Evi</div>
-            <ul class="nav-links">
-                <li><a href="#anasayfa">Anasayfa</a></li>
-                <li><a href="#hakkimizda">Hakkımızda</a></li>
-                <li><a href="#odalar">Odalarımız</a></li>
-                <li><a href="#etkinlikler">Etkinliklerimiz</a></li>
-                <li><a href="#ekip">Ekibimiz</a></li>
-                <li><a href="#iletisim">İletişim</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <a href="#anasayfa" class="logo">Sığacık Huzur ve Bakım Evi</a>
+        <div class="hamburger" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#anasayfa">Anasayfa</a></li>
+          <li><a href="#hakkimizda">Hakkımızda</a></li>
+          <li><a href="#odalar">Odalarımız</a></li>
+          <li><a href="#etkinlikler">Etkinliklerimiz</a></li>
+          <li><a href="#ekip">Ekibimiz</a></li>
+          <li><a href="#iletisim">İletişim</a></li>
+        </ul>
+      </nav>
     </header>
 
     <section id="anasayfa" class="hero">
-        <div class="hero-content">
-            <h1>Sakin Şehirde Huzurlu Yaşam</h1>
-            <p>İzmir Sığacık'ın bol oksijenli havasında, profesyonel bakım ve ev sıcaklığı.</p>
-        </div>
+      <div class="hero-content">
+        <h1>İzmir Huzur Evi ve Bakım Evi</h1>
+        <p>
+          İzmir Sığacık'ın bol oksijenli havasında, profesyonel
+          <strong>yaşlı bakım</strong> ve <strong>sağlık</strong> hizmetiyle ev
+          sıcaklığında bir yaşam.
+        </p>
+      </div>
     </section>
 
     <section id="hakkimizda">
-        <h2 class="section-title">Neden Sığacık?</h2>
-        <div class="about-grid">
-            <div class="info-card">
-                <h3>İyileştiren Hava Kalitesi</h3>
-                <p>Huzurevimiz, Türkiye'nin ilk 'Cittaslow' (Sakin Şehir) unvanına sahip Sığacık'ta yer almaktadır. Ege Denizi'nden gelen iyotlu hava ve bölgenin düşük nem oranı, ileri yaş solunum sağlığı için doğal bir şifa kaynağıdır.</p>
-            </div>
-            <div>
-                <img src="Sığacık.jpg" alt="Sığacık Manzarası" style="width:100%; border-radius:10px;">
-            </div>
-        </div>
+      <h2 class="section-title">Hakkımızda & Neden Sığacık?</h2>
 
-        <div style="margin-top: 60px;">
-            <h2 class="section-title">Hizmet Kalitemiz & Tanıtım</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 30px auto;">
-                Uzman ekibimizle 7/24 sağlık takibi, kişiye özel beslenme programları ve sosyal aktiviteler sunuyoruz.
-            </p>
-            <div class="main-video-container">
-                <video controls>
-                    <source src="Kurum_Video.mp4" type="video/mp4">
-                    Tarayıcınız video formatını desteklemiyor.
-                </video>
-            </div>
+      <div
+        style="
+          max-width: 900px;
+          margin: 0 auto 50px auto;
+          text-align: center;
+          font-size: 1.15rem;
+          color: #555;
+          line-height: 1.8;
+        "
+      >
+        <p>
+          <strong>Sığacık Huzur ve Bakım Evi</strong> olarak, yılların getirdiği
+          derin tecrübe ve alanında uzman profesyonel kadromuzla misafirlerimize
+          yalnızca bir <strong>bakımevi</strong> hizmeti değil, sevgi ve
+          şefkatle örülmüş güvenli bir yuva sunuyoruz. <strong>İzmir</strong>'in
+          sakin şehri Seferihisar'da, büyüklerimizin fiziksel, ruhsal ve
+          <strong>sağlık</strong> ihtiyaçlarını en yüksek standartlarda
+          karşılarken; onlara evlerindeki konforu aratmayacak kaliteli, saygın
+          ve <strong>huzurevi</strong> standartlarının ötesinde bir
+          <strong>yaşlı bakım</strong> alanı sağlamaktayız.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="info-card">
+          <h3>İyileştiren Hava Kalitesi</h3>
+          <p>
+            Tesisimiz, Türkiye'nin ilk 'Cittaslow' (Sakin Şehir) unvanına sahip
+            Sığacık'ta yer almaktadır. Ege Denizi'nden gelen iyotlu hava ve
+            bölgenin düşük nem oranı, ileri yaş solunum sağlığı için doğal bir
+            şifa kaynağıdır. Sağlıklı bir yaşlanma süreci için mükemmel bir
+            konumdur.
+          </p>
         </div>
+        <div>
+          <img
+            src="Sığacık.jpg"
+            alt="İzmir Sığacık Huzur Evi ve Bakım Evi Manzarası"
+            loading="lazy"
+            style="
+              width: 100%;
+              border-radius: 10px;
+              height: 100%;
+              object-fit: cover;
+              min-height: 250px;
+            "
+          />
+        </div>
+      </div>
+
+      <div class="weekly-info-card">
+        <h3>🌟 Haftanın Sağlık Bilgisi</h3>
+        <p id="haftanin-bilgisi-metni">Yükleniyor...</p>
+      </div>
+
+      <div style="margin-top: 60px">
+        <h2 class="section-title">Hizmet Kalitemiz & Tanıtım</h2>
+        <p
+          style="text-align: center; max-width: 800px; margin: 0 auto 30px auto"
+        >
+          Uzman ekibimizle 7/24 sağlık takibi, kişiye özel beslenme programları
+          ve sosyal aktiviteler sunuyoruz.
+        </p>
+        <div class="main-video-container">
+          <video controls preload="metadata">
+            <source src="Kurum_Video.mp4" type="video/mp4" />
+            Tarayıcınız video formatını desteklemiyor.
+          </video>
+        </div>
+      </div>
     </section>
 
-    <section id="odalar" style="background-color: #f0f4f8;">
-        <h2 class="section-title">Konforlu Odalarımız</h2>
-        <div class="gallery-grid">
-            
-            <div class="gallery-item">
-                <video controls>
-                    <source src="ODA/Oda_Video.mp4" type="video/mp4">
-                </video>
-                <div class="item-info"><h3>Oda Tanıtım Videosu</h3></div>
-            </div>
+    <section id="odalar" style="background-color: #f0f4f8">
+      <h2 class="section-title">Konforlu Odalarımız</h2>
 
-            <div class="gallery-item">
-                <img src="ODA/Oda_Resim.jpg" alt="Oda Görseli">
-                <div class="item-info"><h3>Standart Oda</h3></div>
-            </div>
+      <div class="rooms-grid">
+        <div class="gallery-item">
+          <video controls preload="metadata">
+            <source src="ODA/ODA_VIDEO_1.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="gallery-item">
+          <video controls preload="metadata">
+            <source src="ODA/ODA_VIDEO_2.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="gallery-item">
+          <video controls preload="metadata">
+            <source src="ODA/ODA_VIDEO_3.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="gallery-item">
+          <video controls preload="metadata">
+            <source src="ODA/ODA_VIDEO_4.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="gallery-item">
+          <video controls preload="metadata">
+            <source src="ODA/ODA_VIDEO_5.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="gallery-item">
+          <video controls preload="metadata">
+            <source src="ODA/ODA_VIDEO_6.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="gallery-item">
+          <video controls preload="metadata">
+            <source src="ODA/ODA_VIDEO_7.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="gallery-item">
+          <video controls preload="metadata">
+            <source src="ODA/ODA_VIDEO_8.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="gallery-item">
+          <video controls preload="metadata">
+            <source src="ODA/ODA_VIDEO_9.mp4" type="video/mp4" />
+          </video>
+        </div>
 
-            <div class="gallery-item">
-                <img src="ODA/Oda_Resim1.jpg" alt="Oda Görseli">
-                <div class="item-info"><h3>Konforlu Yaşam Alanı</h3></div>
-            </div>
-
-            <div class="gallery-item">
-                <img src="ODA/Oda_Resim2.jpg" alt="Oda Görseli">
-                <div class="item-info"><h3>Geniş Odalar</h3></div>
-            </div>
-            
-             <div class="gallery-item">
-                <img src="ODA/Oda_Resim3.jpg" alt="Oda Görseli">
-                <div class="item-info"><h3>Dinlenme Alanı</h3></div>
-            </div>
-
-            </div>
+        <div class="gallery-item">
+          <img
+            src="ODA/Oda_Resim_1.jpg"
+            alt="İzmir Bakımevi Odası"
+            loading="lazy"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="ODA/Oda_Resim_2.jpg"
+            alt="İzmir Huzurevi Odası"
+            loading="lazy"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="ODA/Oda_Resim_3.jpg"
+            alt="Yaşlı Bakım Odası"
+            loading="lazy"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="ODA/Oda_Resim_4.jpg"
+            alt="İzmir Bakımevi Odası"
+            loading="lazy"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="ODA/Oda_Resim_5.jpg"
+            alt="İzmir Huzurevi Odası"
+            loading="lazy"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="ODA/Oda_Resim_6.jpg"
+            alt="Yaşlı Bakım Odası"
+            loading="lazy"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="ODA/Oda_Resim_7.jpg"
+            alt="İzmir Bakımevi Odası"
+            loading="lazy"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="ODA/Oda_Resim_8.jpg"
+            alt="İzmir Huzurevi Odası"
+            loading="lazy"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="ODA/Oda_Resim_9.jpg"
+            alt="Yaşlı Bakım Odası"
+            loading="lazy"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="ODA/Oda_Resim_10.jpg"
+            alt="İzmir Bakımevi Odası"
+            loading="lazy"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="ODA/Oda_Resim_11.jpg"
+            alt="İzmir Huzurevi Odası"
+            loading="lazy"
+          />
+        </div>
+      </div>
     </section>
 
     <section id="etkinlikler">
-        <h2 class="section-title">Sosyal Yaşam ve Etkinliklerimiz</h2>
-        <p style="text-align: center; margin-bottom: 30px;">Misafirlerimizin keyifli vakit geçirmesi için her gün çeşitli aktiviteler düzenliyoruz.</p>
-        
+      <h2 class="section-title">Sosyal Yaşam ve Etkinliklerimiz</h2>
+      <p style="text-align: center; margin-bottom: 30px">
+        Misafirlerimizin keyifli vakit geçirmesi için her gün çeşitli
+        aktiviteler düzenliyoruz.
+      </p>
+
+      <div class="slider-wrapper">
+        <button class="slider-btn prev-btn" onclick="kaydir(this, -1)">
+          &#10094;
+        </button>
+
         <div class="gallery-grid">
-            
-            <div class="gallery-item">
-                <video controls>
-                    <source src="Etkinlik/E1_Video.mp4" type="video/mp4">
-                </video>
-                <div class="item-info"><h3>Havuz Kenarında Yürüyüş </h3></div>
-            </div>
-            
-            <div class="gallery-item">
-                <video controls>
-                    <source src="Etkinlik/E2_Video.mp4" type="video/mp4">
-                </video>
-                <div class="item-info"><h3>Nostaljik Şarkılar </h3></div>
-            </div>
-            
-            <div class="gallery-item">
-                <video controls>
-                    <source src="Etkinlik/E3_Video.mp4" type="video/mp4">
-                </video>
-                <div class="item-info"><h3>Anneler Günü </h3></div>
-            </div>
-            
-            <div class="gallery-item">
-                <video controls>
-                    <source src="Etkinlik/E4_Video.mp4" type="video/mp4">
-                </video>
-                <div class="item-info"><h3>Fizik Tedavi Çalışması </h3></div>
-            </div>
-            
-            <div class="gallery-item">
-                <video controls>
-                    <source src="Etkinlik/E5_Video.mp4" type="video/mp4">
-                </video>
-                <div class="item-info"><h3>Bayram Kutlaması </h3></div>
-            </div>
+          <div class="gallery-item">
+            <video controls preload="metadata">
+              <source src="Etkinlik/E1_Video.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="gallery-item">
+            <video controls preload="metadata">
+              <source src="Etkinlik/E2_Video.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="gallery-item">
+            <video controls preload="metadata">
+              <source src="Etkinlik/E3_Video.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="gallery-item">
+            <video controls preload="metadata">
+              <source src="Etkinlik/E4_Video.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="gallery-item">
+            <video controls preload="metadata">
+              <source src="Etkinlik/E5_Video.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="gallery-item">
+            <video controls preload="metadata">
+              <source src="Etkinlik/E6_Video.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="gallery-item">
+            <video controls preload="metadata">
+              <source src="Etkinlik/E7_Video.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="gallery-item">
+            <video controls preload="metadata">
+              <source src="Etkinlik/E8_Video.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="gallery-item">
+            <video controls preload="metadata">
+              <source src="Etkinlik/E9_Video.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="gallery-item">
+            <video controls preload="metadata">
+              <source src="Etkinlik/E10_Video.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="gallery-item">
+            <video controls preload="metadata">
+              <source src="Etkinlik/E11_Video.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="gallery-item">
+            <video controls preload="metadata">
+              <source src="Etkinlik/E12_Video.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="gallery-item">
+            <video controls preload="metadata">
+              <source src="Etkinlik/E13_Video.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="gallery-item">
+            <video controls preload="metadata">
+              <source src="Etkinlik/E14_Video.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="gallery-item">
+            <video controls preload="metadata">
+              <source src="Etkinlik/E15_Video.mp4" type="video/mp4" />
+            </video>
+          </div>
 
-            <div class="gallery-item">
-                <img src="Etkinlik/E_Resim.jpg" alt="Etkinlik">
-                <div class="item-info"><h3>Bayram Kutlaması</h3></div>
-            </div>
-
-            <div class="gallery-item">
-                <img src="Etkinlik/E_Resim1.jpg" alt="Etkinlik">
-                <div class="item-info"><h3>El Sanatları</h3></div>
-            </div>
-            
-            <div class="gallery-item">
-                <img src="Etkinlik/E_Resim2.jpg" alt="Etkinlik">
-                <div class="item-info"><h3>El Sanatları</h3></div>
-            </div>
-            
-            <div class="gallery-item">
-                <img src="Etkinlik/E_Resim3.jpg" alt="Etkinlik">
-                <div class="item-info"><h3>El Sanatları</h3></div>
-            </div>
-            
-            <div class="gallery-item">
-                <img src="Etkinlik/E_Resim4.jpg" alt="Etkinlik">
-                <div class="item-info"><h3>El Sanatları</h3></div>
-            </div>
-            
-            <div class="gallery-item">
-                <img src="Etkinlik/E_Resim5.jpg" alt="Etkinlik">
-                <div class="item-info"><h3>El Sanatları</h3></div>
-            </div>
-            
-            <div class="gallery-item">
-                <img src="Etkinlik/E_Resim6.jpg" alt="Etkinlik">
-                <div class="item-info"><h3>El Sanatları</h3></div>
-            </div>
-            
-            <div class="gallery-item">
-                <img src="Etkinlik/E_Resim7.jpg" alt="Etkinlik">
-                <div class="item-info"><h3>El Sanatları</h3></div>
-            </div>
-            
-            <div class="gallery-item">
-                <img src="Etkinlik/E_Resim8.jpg" alt="Etkinlik">
-                <div class="item-info"><h3>El Sanatları</h3></div>
-            </div>
-            
-            <div class="gallery-item">
-                <img src="Etkinlik/E_Resim10.jpg" alt="Etkinlik">
-                <div class="item-info"><h3>Bahçe Keyfi</h3></div>
-            </div>
-            
-            <div class="gallery-item">
-                <img src="Etkinlik/E_Resim11.jpg" alt="Etkinlik">
-                <div class="item-info"><h3>Doğum Günü</h3></div>
-            </div>
-            
-            <div class="gallery-item">
-                <img src="Etkinlik/E_Resim13.jpg" alt="Etkinlik">
-                <div class="item-info"><h3>Gençlerle Buluşma</h3></div>
-            </div>
-            
-            <div class="gallery-item">
-                <img src="Etkinlik/E_Resim14.jpg" alt="Etkinlik">
-                <div class="item-info"><h3>Gençlerle Buluşma</h3></div>
-            </div>
-            
-            <div class="gallery-item">
-                <img src="Etkinlik/E_Resim15.jpg" alt="Etkinlik">
-                <div class="item-info"><h3>Gençlerle Buluşma</h3></div>
-            </div>
-            
-            <div class="gallery-item">
-                <img src="Etkinlik/E_Resim16.jpg" alt="Etkinlik">
-                <div class="item-info"><h3>Gençlerle Buluşma</h3></div>
-            </div>
-            
-            <div class="gallery-item">
-                <img src="Etkinlik/E_Resim17.jpg" alt="Etkinlik">
-                <div class="item-info"><h3>Gençlerle Buluşma</h3></div>
-            </div>
-            
-            <div class="gallery-item">
-                <img src="Etkinlik/E_Resim19.jpg" alt="Etkinlik">
-                <div class="item-info"><h3>Gençlerle Buluşma</h3></div>
-            </div>
-            
-            <div class="gallery-item">
-                <img src="Etkinlik/E_Resim20.jpg" alt="Etkinlik">
-                <div class="item-info"><h3>Kahve Keyfi</h3></div>
-            </div>
-            
-            <div class="gallery-item">
-                <img src="Etkinlik/E_Resim21.jpg" alt="Etkinlik">
-                <div class="item-info"><h3>Oyunlar</h3></div>
-            </div>
-
-            <div class="gallery-item">
-                <img src="Etkinlik/E_Resim24.jpg" alt="Etkinlik">
-                <div class="item-info"><h3>Oyunlar</h3></div>
-            </div>
-        
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_1.jpg"
+              alt="İzmir Huzurevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_2.jpg"
+              alt="İzmir Bakımevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_3.jpg"
+              alt="Yaşlı Bakım Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_4.jpg"
+              alt="İzmir Huzurevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_5.jpg"
+              alt="İzmir Bakımevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_6.jpg"
+              alt="Yaşlı Bakım Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_7.jpg"
+              alt="İzmir Huzurevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_8.jpg"
+              alt="İzmir Bakımevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_9.jpg"
+              alt="Yaşlı Bakım Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_10.jpg"
+              alt="İzmir Huzurevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_11.jpg"
+              alt="İzmir Bakımevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_12.jpg"
+              alt="Yaşlı Bakım Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_13.jpg"
+              alt="İzmir Huzurevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_14.jpg"
+              alt="İzmir Bakımevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_15.jpg"
+              alt="Yaşlı Bakım Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_16.jpg"
+              alt="İzmir Huzurevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_17.jpg"
+              alt="İzmir Bakımevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_18.jpg"
+              alt="Yaşlı Bakım Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_19.jpg"
+              alt="İzmir Huzurevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_20.jpg"
+              alt="İzmir Bakımevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_21.jpg"
+              alt="Yaşlı Bakım Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_22.jpg"
+              alt="İzmir Huzurevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_23.jpg"
+              alt="İzmir Bakımevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_24.jpg"
+              alt="Yaşlı Bakım Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_25.jpg"
+              alt="İzmir Huzurevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_26.jpg"
+              alt="İzmir Bakımevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_27.jpg"
+              alt="Yaşlı Bakım Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_28.jpg"
+              alt="İzmir Huzurevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_29.jpg"
+              alt="İzmir Bakımevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_30.jpg"
+              alt="Yaşlı Bakım Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_31.jpg"
+              alt="İzmir Huzurevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_32.jpg"
+              alt="İzmir Bakımevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_33.jpg"
+              alt="Yaşlı Bakım Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_34.jpg"
+              alt="İzmir Huzurevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_35.jpg"
+              alt="İzmir Bakımevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_36.jpg"
+              alt="Yaşlı Bakım Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_37.jpg"
+              alt="İzmir Huzurevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_38.jpg"
+              alt="İzmir Bakımevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_39.jpg"
+              alt="Yaşlı Bakım Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_40.jpg"
+              alt="İzmir Huzurevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_41.jpg"
+              alt="İzmir Bakımevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_42.jpg"
+              alt="Yaşlı Bakım Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_43.jpg"
+              alt="İzmir Huzurevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_44.jpg"
+              alt="İzmir Bakımevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_45.jpg"
+              alt="Yaşlı Bakım Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_46.jpg"
+              alt="İzmir Huzurevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_47.jpg"
+              alt="İzmir Bakımevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_48.jpg"
+              alt="Yaşlı Bakım Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_49.jpg"
+              alt="İzmir Huzurevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_50.jpg"
+              alt="İzmir Bakımevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_51.jpg"
+              alt="Yaşlı Bakım Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_52.jpg"
+              alt="İzmir Huzurevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_53.jpg"
+              alt="İzmir Bakımevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_54.jpg"
+              alt="Yaşlı Bakım Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_55.jpg"
+              alt="İzmir Huzurevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_56.jpg"
+              alt="İzmir Bakımevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_57.jpg"
+              alt="Yaşlı Bakım Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_58.jpg"
+              alt="İzmir Huzurevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_59.jpg"
+              alt="İzmir Bakımevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_60.jpg"
+              alt="Yaşlı Bakım Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_61.jpg"
+              alt="İzmir Huzurevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_62.jpg"
+              alt="İzmir Bakımevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_63.jpg"
+              alt="Yaşlı Bakım Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_64.jpg"
+              alt="İzmir Huzurevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_65.jpg"
+              alt="İzmir Bakımevi Etkinlik"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="Etkinlik/E_Resim_66.jpg"
+              alt="Yaşlı Bakım Etkinlik"
+              loading="lazy"
+            />
+          </div>
         </div>
-        
+
+        <button class="slider-btn next-btn" onclick="kaydir(this, 1)">
+          &#10095;
+        </button>
+      </div>
     </section>
 
-    <section id="ekip" style="background-color: #f0f4f8;">
-        <h2 class="section-title">Uzman Kadromuz</h2>
-        <div class="team-list">
-            <div class="team-member">Geriatri Uzmanı Doktor</div>
-            <div class="team-member">Fizyoterapist</div>
-            <div class="team-member">Psikolog</div>
-            <div class="team-member">Sorumlu Hemşire</div>
-            <div class="team-member">Beslenme Uzmanı</div>
-            <div class="team-member">Yaşlı Bakım Teknikerleri</div>
-        </div>
+    <section id="ekip" style="background-color: #f0f4f8">
+      <h2 class="section-title">Uzman Sağlık Kadromuz</h2>
+      <div class="team-list">
+        <div class="team-member">Geriatri Uzmanı Doktor</div>
+        <div class="team-member">Fizyoterapist</div>
+        <div class="team-member">Psikolog</div>
+        <div class="team-member">Sorumlu Hemşire</div>
+        <div class="team-member">Beslenme Uzmanı</div>
+        <div class="team-member">Yaşlı Bakım Teknikerleri</div>
+      </div>
     </section>
 
     <footer id="iletisim">
-        <h2>Bizimle İletişime Geçin</h2>
-        <p>Detaylı bilgi ve randevu için bizi arayın.</p>
-        <a href="tel:+902320000000" class="phone-number">0 (232) 000 00 00</a>
-        <p style="font-size: 0.9rem; margin-top: 30px; opacity: 0.8;">
-            Adres: Sığacık Mahallesi, Huzur Sokak, Seferihisar / İZMİR
-        </p>
+      <h2>Bizimle İletişime Geçin</h2>
+      <p>
+        İzmir'deki bakımevi ve huzurevimiz hakkında detaylı bilgi ve randevu
+        için bizi arayın.
+      </p>
+      <a href="tel:+902320000000" class="phone-number">0 (232) 000 00 00</a>
+
+      <div class="footer-social">
+        <a
+          href="https://www.instagram.com/kullaniciadiniz"
+          target="_blank"
+          title="Instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/905000000000" target="_blank" title="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+
+      <p style="font-size: 0.9rem; margin-top: 30px; opacity: 0.8">
+        Adres: Sığacık Mahallesi, Huzur Sokak, Seferihisar / İZMİR
+      </p>
     </footer>
 
-</body>
+    <div class="floating-social">
+      <a
+        href="https://www.instagram.com/kullaniciadiniz"
+        target="_blank"
+        class="float-btn instagram-btn"
+        title="Instagram'da Bizi Takip Edin"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a
+        href="https://wa.me/905000000000"
+        target="_blank"
+        class="float-btn whatsapp-btn"
+        title="WhatsApp'tan Bize Ulaşın"
+      >
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+
+    <script>
+      // 1. HAFTANIN BİLGİSİ SİSTEMİ
+      const saglikBilgileri = [
+        "Yaşlılıkta düzenli hafif yürüyüşler yapmak, kalp sağlığını korumanın ve kas kaybını önlemenin en etkili yollarından biridir.",
+        "İleri yaşlarda susuzluk hissi azalabilir. Bu yüzden susamayı beklemeden gün içinde sık sık su içmek böbrek sağlığı için kritiktir.",
+        "Sosyal etkileşim ve sohbet etmek, Alzheimer ve demans riskini azaltmada en az bulmaca çözmek kadar etkilidir.",
+        "Kaliteli ve düzenli uyku, bağışıklık sistemini güçlendirir ve gün içindeki yorgunluk hissini minimuma indirir.",
+        "Akdeniz diyeti (zeytinyağı, taze sebze, balık ağırlıklı beslenme), ileri yaşlarda zihinsel ve fiziksel sağlığı destekleyen en iyi beslenme şeklidir.",
+        "Güneşli havalarda 15-20 dakika açık havada vakit geçirmek, kemik erimesine karşı vücudun ihtiyaç duyduğu D vitaminini sağlar.",
+      ];
+
+      function haftaninBilgisiniGetir() {
+        const bugun = new Date();
+        const yilBasi = new Date(bugun.getFullYear(), 0, 1);
+        const gunFarki = Math.floor((bugun - yilBasi) / (24 * 60 * 60 * 1000));
+        const haftaNumarasi = Math.ceil((bugun.getDay() + 1 + gunFarki) / 7);
+
+        const bilgiSirasi = haftaNumarasi % saglikBilgileri.length;
+
+        const metinAlani = document.getElementById("haftanin-bilgisi-metni");
+        if (metinAlani) {
+          metinAlani.innerText = saglikBilgileri[bilgiSirasi];
+        }
+      }
+      window.addEventListener("load", haftaninBilgisiniGetir);
+
+      // 2. SLIDER SAĞA-SOLA KAYDIRMA İŞLEMİ
+      function kaydir(buton, yon) {
+        const wrapper = buton.parentElement;
+        const galeri = wrapper.querySelector(".gallery-grid");
+        const kaydirmaMiktari = 320;
+
+        galeri.scrollBy({
+          left: yon * kaydirmaMiktari,
+          behavior: "smooth",
+        });
+      }
+
+      // 3. HAMBURGER MENÜ AÇ/KAPAT İŞLEMİ
+      function toggleMenu() {
+        const navLinks = document.querySelector(".nav-links");
+        navLinks.classList.toggle("active");
+      }
+
+      // Mobilde menü otomatik kapanması
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          const navLinks = document.querySelector(".nav-links");
+          if (navLinks.classList.contains("active")) {
+            navLinks.classList.remove("active");
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
