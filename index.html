@@ -129,7 +129,7 @@
         color: var(--accent-color);
       }
 
-      /* HAMBURGER MENÜ İKONU (MASAÜSTÜNDE GİZLİ) */
+      /* HAMBURGER MENÜ İKONU */
       .hamburger {
         display: none;
         cursor: pointer;
@@ -183,6 +183,11 @@
         font-size: 2.2rem;
       }
 
+      /* HAKKIMIZDA METİN DÜZENİ */
+      .about-text p {
+        margin-bottom: 15px;
+      }
+
       /* HAFTANIN BİLGİSİ KART TASARIMI */
       .weekly-info-card {
         background: var(--accent-color);
@@ -221,19 +226,39 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
       }
 
-      /* ANA TANITIM VİDEOSU İÇİN KAPSAYICI */
-      .main-video-container {
-        width: 100%;
-        max-width: 800px;
-        margin: 20px auto;
-        background: #000;
-        border-radius: 10px;
-        overflow: hidden;
+      /* YENİ EKLENEN HİZMETLER KART SİSTEMİ */
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+        margin-top: 30px;
       }
-      .main-video-container video {
-        width: 100%;
-        height: auto;
-        display: block;
+      .service-card {
+        background: var(--bg-light);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        border-top: 4px solid var(--accent-color);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+      .service-card h3 {
+        color: var(--primary-color);
+        margin-top: 0;
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+      }
+      .service-card ul {
+        padding-left: 20px;
+        margin-bottom: 0;
+      }
+      .service-card li {
+        margin-bottom: 8px;
       }
 
       /* ODALAR İÇİN YENİ GRID SİSTEMİ */
@@ -264,7 +289,7 @@
         width: 100%;
       }
 
-      /* Scrollbar Tasarımı (Etkinlikler İçin) */
+      /* Scrollbar Tasarımı */
       .gallery-grid::-webkit-scrollbar {
         height: 10px;
       }
@@ -293,12 +318,10 @@
         transition: transform 0.3s;
         display: block;
       }
-
       .gallery-item:hover {
         transform: translateY(-5px);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
       }
-
       .gallery-item img,
       .gallery-item video {
         width: 100%;
@@ -329,12 +352,10 @@
           background 0.3s,
           transform 0.2s;
       }
-
       .slider-btn:hover {
         background-color: #1a5b78;
         transform: translateY(-50%) scale(1.1);
       }
-
       .prev-btn {
         left: -20px;
       }
@@ -391,7 +412,7 @@
         transform: scale(1.2);
       }
 
-      /* YÜZEN SOSYAL MEDYA BUTONLARI (SAĞ ALT KÖŞE) */
+      /* YÜZEN SOSYAL MEDYA BUTONLARI */
       .floating-social {
         position: fixed;
         bottom: 20px;
@@ -473,7 +494,7 @@
           font-size: 1.1rem;
         }
         .nav-links.active {
-          max-height: 350px;
+          max-height: 400px;
         }
         .float-btn {
           width: 45px;
@@ -500,6 +521,7 @@
         <ul class="nav-links">
           <li><a href="#anasayfa">Anasayfa</a></li>
           <li><a href="#hakkimizda">Hakkımızda</a></li>
+          <li><a href="#hizmetlerimiz">Hizmetlerimiz</a></li>
           <li><a href="#odalar">Odalarımız</a></li>
           <li><a href="#etkinlikler">Etkinliklerimiz</a></li>
           <li><a href="#ekip">Ekibimiz</a></li>
@@ -523,26 +545,60 @@
       <h2 class="section-title">Hakkımızda & Neden Sığacık?</h2>
 
       <div
+        class="about-text"
         style="
-          max-width: 900px;
+          max-width: 1000px;
           margin: 0 auto 50px auto;
-          text-align: center;
-          font-size: 1.15rem;
+          text-align: justify;
+          font-size: 1.1rem;
           color: #555;
           line-height: 1.8;
         "
       >
         <p>
-          <strong>Sığacık Huzurevi ve Yaşlı Bakım Merkezi</strong> olarak,
-          yılların getirdiği derin tecrübe ve alanında uzman profesyonel
-          kadromuzla misafirlerimize yalnızca bir
-          <strong>bakımevi</strong> hizmeti değil, sevgi ve şefkatle örülmüş
-          güvenli bir yuva sunuyoruz. <strong>İzmir</strong>'in sakin şehri
-          Seferihisar'da, büyüklerimizin fiziksel, ruhsal ve
-          <strong>sağlık</strong> ihtiyaçlarını en yüksek standartlarda
-          karşılarken; onlara evlerindeki konforu aratmayacak kaliteli, saygın
-          ve <strong>huzurevi</strong> standartlarının ötesinde bir
-          <strong>yaşlı bakım</strong> alanı sağlamaktayız.
+          Mandalina bahçeleri içerisinde yer alan tesisimiz; marketlere,
+          restorantlara, yöresel pazara ve sahile yürüyüş mesafesindedir.
+          <strong>Sığacık Yaşlı Bakımı ve Sağlıklı Yaşam Merkezimiz</strong>,
+          2.000 m² alan üzerine kurulmuş olup, 7 kat’dan oluşmaktadır. Otel
+          konforunda; aktif, sosyal ve huzurlu yaşamın sağlandığı, sağlık ve
+          bakım hizmeti vermekteyiz. 2004'te otel konseptinde hizmete açılan
+          tesis, 2014 yılından itibaren sağlık ve bakım alanında hizmet vermeye
+          başlamıştır.
+        </p>
+        <p>
+          Hizmet sunumundaki temel prensip; geçmişten bugüne edindiğimiz
+          deneyimlerimiz, günümüzde sektörde yaşanan gelişme ve değişimler ile
+          sevgi, saygı çerçevesinde bireysel olarak planlanan sağlık ve bakım
+          hizmeti / aktif yaş alma sürecidir. Kuruluşumuzun 131 kişilik büyük
+          kapasitesi ve binamızın çok katlı olması farklı profildeki
+          misafirlerimizin ayrı katlarda hizmet almasına ve kendi profilindeki
+          kişilerle iletişimini güçlendirmesine fırsat vermektedir.
+        </p>
+        <p>
+          Tesis her katta alanında uzmanlaşmış Yaşlı Bakım ve Sağlık
+          personelleri ile hizmetini sürdürürken, çağın gerektirdiği yenilikler
+          ve değişen bireysel ihtiyaçların karşılanmasında misafirlerimizin
+          eğitim ve kültürel farklılıklarını da gözetmektedir. Binamızda tüm
+          katlara engelsiz erişim bulunmaktadır. Acil durumlar için 2 adet
+          yangın merdiveni ve her türlü güvenlik tedbirleri alınmıştır. Binamız
+          merkezi sistem ile ısıtılmakta, 7/24 sıcak su mevcuttur.
+        </p>
+        <p>
+          Sağlık ve sosyal farklılıklarına göre zemin katta ve 1. katta etkinlik
+          ve sosyal faaliyetler için oluşturulmuş 2 ayrı salonumuz
+          bulunmaktadır. Tüm konuklarımız yakınlarını onlar için hazırladığımız
+          misafir salonumuzda kabul edebilirler. Misafirlerimize sunduğumuz,
+          diyetisyen tarafından hazırlanan tüm besinler kuruluşumuzun mutfağında
+          profesyonel aşçılar tarafından özenle pişirilmekte ve sunulmaktadır.
+        </p>
+        <p>
+          Merkezimizde her çeşit meyve ağacının da olduğu yeşil ile maviyi
+          buluşturan, misafirlerimizin kullanımına sunulan içinde 75 m² yüzme
+          havuzu bulunan geniş bir bahçemiz bulunmaktadır. İhtiyaca ve tercihe
+          göre düzenlenen iki-üç-duble ya da tek kişilik odalarımız geniş ve
+          aydınlık olup her odamızın ayrı banyo ve tuvaleti mevcuttur. Tüm
+          odalarımızın balkonunda, havuz, deniz ve doğa manzarası eşliğinde
+          yemeklerinizi yiyebilirsiniz.
         </p>
       </div>
 
@@ -577,20 +633,133 @@
         <h3>🌟 Haftanın Sağlık Bilgisi</h3>
         <p id="haftanin-bilgisi-metni">Yükleniyor...</p>
       </div>
+    </section>
 
-      <div style="margin-top: 60px">
-        <h2 class="section-title">Hizmet Kalitemiz & Tanıtım</h2>
-        <p
-          style="text-align: center; max-width: 800px; margin: 0 auto 30px auto"
-        >
-          Uzman ekibimizle 7/24 sağlık takibi, kişiye özel beslenme programları
-          ve sosyal aktiviteler sunuyoruz.
-        </p>
-        <div class="main-video-container">
-          <video controls preload="metadata">
-            <source src="Kurum_Video.mp4" type="video/mp4" />
-            Tarayıcınız video formatını desteklemiyor.
-          </video>
+    <section id="hizmetlerimiz" style="background-color: #f8f9fa">
+      <h2 class="section-title">Hizmetlerimiz</h2>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Kişiye Özel Bakım</h3>
+          <p>
+            Bireyin sağlık durumu, kişilik özellikleri aldığı eğitim, kültürel
+            yapısı, yaşadığı çevreye göre farklı ihtiyaçlar doğurur. Merkezimize
+            kabul edilen her misafir için sağlık ve sosyal açıdan değerlendirme
+            yapılır. Kişisel olarak ihtiyaç duyduğu bakımları kendisi
+            yapabiliyorsa desteklenir, kendisi yapamıyor ise tüm ihtiyaçları
+            personelimiz tarafından tek tek planlanıp gerçekleştirilir.
+          </p>
+          <p style="margin-top: 10px; font-weight: bold">
+            Kişisel bakımı sağlanmış bireyler:
+          </p>
+          <ul>
+            <li>Sağlıklı olurlar.</li>
+            <li>Çevreye kolay uyum sağlarlar.</li>
+            <li>Kendilerine olan güvenleri artar.</li>
+            <li>Başarılı olurlar.</li>
+            <li>Kolay arkadaş edinirler.</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <h3>Beslenme</h3>
+          <p>
+            Yeterli ve dengeli beslenme; büyüme gelişme, hastalıklardan korunma
+            ve kaliteli bir yaşam sürme için temel bir ihtiyaçtır. Kuruluşumuz
+            Diyetisyen-Doktor ve sağlık personelinden oluşan ekip ile
+            misafirlerimize sunulan beslenme düzeni şu şekildedir:
+          </p>
+          <ul style="margin-top: 10px">
+            <li>Sebze ve meyve tüketimi arttırılmış</li>
+            <li>Ekmek ve diğer tahıllar yeterli miktarda</li>
+            <li>Doymuş yağ tüketimi azaltılmış</li>
+            <li>Yeterli protein içeren</li>
+            <li>Su ve diğer sıvılar yeterli ve kontrollü</li>
+            <li>Posa tüketimi artırılmış</li>
+            <li>Kalsiyum içeriği yüksek besinler ile</li>
+            <li>Tuz, sodyum ve şeker tüketimi azaltılarak</li>
+            <li>Doğru hazırlanmış ve pişirilmiş besinler</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <h3>Doktor Hizmeti</h3>
+          <p>
+            Merkezime giriş için başvuru yapan misafirlerimizin sağlık geçmişine
+            ilişkin raporlar, tedaviler, hastane yatışları gibi tüm bilgi ve
+            belgeleri içeren dosyası ile kabulü yapılır. Kurum doktorumuz ve
+            sağlık ekibimiz tarafından gerekli kontroller yapılarak mevcut
+            hastalıkları ve tedavileri doğrultusunda takip formları oluşturulur.
+          </p>
+          <p>
+            Kurum hekimi tarafından haftalık muayeneleri yapılan
+            misafirlerimizin planlanmış tedavilerinin devamlılığı
+            sağlanmaktadır. Akut rahatsızlıkların basit tedavileri merkezimizde
+            gerçekleştirilirken; ihtiyaç duyulması durumunda uzman muayenesi
+            için ailelerle iletişime geçilir. Acil risk durumlarında ilk
+            müdahale yapılarak 112 acil ekibi ile hastaneye sevk
+            gerçekleştirilir.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3>Aktif Yaşlanma ve Sosyal Aktiviteler</h3>
+          <p>
+            Merkezimizde Misafirlerimizin yaşam kalitesini yükseltmek için
+            yapılacak etkinlikler; yaş, eğitim durumu, kronik hastalıklar ve
+            fiziksel aktivite durumları doğrultusunda gruplar halinde veya
+            odalarında bireysel olarak planlanır ve aktif yaşama katılımı
+            sağlanır.
+          </p>
+          <ul style="margin-top: 10px">
+            <li>Sportif faaliyetler ve günlük egzersizler</li>
+            <li>Özel günler, doğum günü etkinlikleri</li>
+            <li>Sohbet ortamı sağlanarak anıların paylaşılması</li>
+            <li>Mesleki rehabilitasyon, sanat ve müzik etkinlikleri</li>
+            <li>Hafıza oyunları ile hayatın içinde kalmaları</li>
+            <li>El, göz koordinasyonu geliştirici etkinlikler</li>
+            <li>Üretilen ürünlerin sergilenmesi ve satışı</li>
+            <li>STK’lara üye olmalarının desteklenmesi</li>
+            <li>Teknolojik aletlerin kullanımına yönelik eğitimler</li>
+            <li>Seyahat ve gezi etkinlikleri</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <h3>Fizyoterapi</h3>
+          <p>
+            Merkezimize kabul edilen misafirlerimizin görevli fizyoterapist
+            tarafından ilk muayenesi detaylı olarak yapılmaktadır. Kas, eklem ve
+            genel sağlık durumuna göre egzersizler planlanmakta, düzenli olarak
+            uygulanmaktadır. Belirli sürelerde yapılan değerlendirmelerde
+            sağlanan faydanın kritiği yapılmaktadır. Gerekli görülmesi durumunda
+            planda değişiklikler yapılır. Yapılan tüm değerlendirmeler aileler
+            ile düzenli olarak paylaşılmaktadır.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3>Psikolojik Destek</h3>
+          <p>
+            Sosyal hizmet uzmanlarımız tarafından her gün tüm misafirlerimiz
+            odalarında ve sosyal alanlarda bireysel olarak ziyaret edilmektedir.
+            Günlük olarak yapılan bu ziyaretlerde onların sevinç, üzüntü, kaygı
+            ve sıkıntısı gibi psikolojik durumları değerlendirilmektedir.
+            Merkezimizden, personelimizden veya ailesinden beklentileri, istek
+            ve ihtiyaçları alınmakta ve değerlendirilmektedir.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3>24 Saat Personel Sağlık Hizmeti</h3>
+          <p>
+            Merkezimizde 24 saat profesyonel sağlık ekibimiz ile hizmet
+            vermekteyiz. Misafirlerimizin günlük bakım hizmeti sağlık personeli
+            gözetiminde planlı olarak sağlanmaktadır. Daha yoğun bakım
+            gerektiren kişilerin bakım planı öncelikle sağlık durumu
+            doğrultusunda kişiye özel planlarla büyük bir titizlikle
+            yapılmaktadır.
+          </p>
         </div>
       </div>
     </section>
@@ -734,7 +903,7 @@
 
       <div class="slider-wrapper">
         <button class="slider-btn prev-btn" onclick="kaydir(this, -1)">
-          &#10094;
+          ❮
         </button>
 
         <div class="gallery-grid">
@@ -1278,9 +1447,7 @@
           </div>
         </div>
 
-        <button class="slider-btn next-btn" onclick="kaydir(this, 1)">
-          &#10095;
-        </button>
+        <button class="slider-btn next-btn" onclick="kaydir(this, 1)">❯</button>
       </div>
     </section>
 
@@ -1342,7 +1509,7 @@
         "
       >
         <iframe
-          src="https://maps.google.com/maps?q=S%C4%B1%C4%9Fac%C4%B1k+Mahallesi+S%C4%B1%C4%9Fac%C4%B1k+Caddesi+No:39+Seferihisar%2F%C4%B0ZM%C4%B0R&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          src="https://maps.google.com/maps?q=S%C4%B1%C4%9Fac%C4%B1k%20Mahallesi%20S%C4%B1%C4%9Fac%C4%B1k%20Caddesi%20No%3A39%20Seferihisar%20%2F%20%C4%B0ZM%C4%B0R&t=&z=15&ie=UTF8&iwloc=&output=embed"
           width="100%"
           height="350"
           style="border: 0; display: block"
